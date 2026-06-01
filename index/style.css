@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tags */
+body {
+    background-color: #1f0f00;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-image: url('img/graos.png');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid #bb722d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+main {
+    background-color: #664117;
+}
+
+footer {
+    background-color: #1f0f00;
+    padding: 20px;
+}
+
+h3 {
+    font-size: 30px;
+    color: #bb722d;
+}
+
+/* Classes */
+.logo-nome {
+    display: flex;
+    align-items: center;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.frases {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 20px;
+    text-align: center;
+}
+
+.sobre {
+    background-color: rgb(240, 210, 176);
+    border-bottom: 2px solid #422000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 40px;
+}
+
+.descricao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ctlg {
+    text-align: center;
+    padding: 30px;
+}
+
+.card-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.cards {
+    background-color: #422000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 1px 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.cards:hover {
+    transform: translateY(-5px);
+}
+
+.imagem-catalogo {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+}
+
+.descricao-produto {
+    font-size: 16px;
+    color: #bb722d;
+    margin-top: 10px;
+}
+
+.preco-produto {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin: 10px 0 20px;
+}
+
+.informacoes {
+    background-color: #301700;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px;
+    border-radius: 8px;
+}
+
+.informacoes-navegacao {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.informacoes-social {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.informacoes-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+
+.inf {
+    margin-bottom: 15px;
+}
+
+.botao-navegacao {
+    color: #dbdbdb;
+    transition: color 0.3s ease;
+}
+
+.botao-navegacao:hover {
+    color: white;
+}
+
+.botao-social {
+    color: #dbdbdb;
+    transition: color 0.3s ease;
+}
+
+.botao-social:hover {
+    color: white;
+}
+
+.link-botao {
+    display: inline-block;
+    background-color: #422000;
+    color: white;
+    width: 198px;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.link-botao:hover {
+    background-color: #874000;
+}
+
+.botao-produto {
+    font-size: 12px;
+    width: 70px;
+    height: 30px;
+    color: white;
+    background-color: #612f00;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-produto:hover {
+    background-color: #874000;
+}
+
+/* IDs */
+
+.botao-contato {
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: #c29061;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#botao-contato:hover {
+    background-color: #6b4a2d;
+    color: whitesmoke;
+}
+
+#logo-cafeteria {
+    width: 50px;
+    height: auto;
+}
+
+#nome-cafeteria {
+    color: white;
+    font-size: 30px;
+}
+
+#frase-principal {
+    color: white;
+    font-size: 40px;
+    font-family: monospace;
+}
+
+#frase-secundaria {
+    color: rgb(201, 201, 201);
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#imagem-namore {
+    width: 45%;
+    border-radius: 8px;
+}
+
+#p-descricao-cafe {
+    font-size: 18px;
+    color: #422000;
+}
+
+#p-descricao-detalhe {
+    font-size: 16px;
+    color: #422000;
+}
+
+#catalogo-produtos {
+    color: white;
+    margin-bottom: 10px;
+}
+
+#botao-produtos {
+    display: inline-block;
+    background-color: #422000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 22px;
+    font-family: Georgia, serif;
+}
+
+#botao-produtos:hover {
+    background-color: #874000;
+}
+
+#botao-sobre {
+    display: inline-block;
+    background-color: #422000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#botao-sobre:hover {
+    background-color: #874000;
+}
+
+/* Responsividade */
+
+@media (max-width: 1024px) {
+
+    .card-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    #imagem-namore {
+        width: 100%;
+    }
+
+    .informacoes {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .botoes {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .card-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    #nome-cafeteria {
+        text-align: center;
+    }
+
+    #frase-principal {
+        font-size: 30px;
+    }
+
+    #frase-secundaria {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+}

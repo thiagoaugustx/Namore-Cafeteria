@@ -265,7 +265,7 @@ i{
 }
 
 .rodape{
-    background-color: #150901;
+    background-color: #241003;
     height: 40vh;
     display: flex;
     justify-content: space-between;
@@ -384,7 +384,136 @@ i{
     border-radius: 90px;
     margin: 5px;
     color:  #e4d3b4;;
+    opacity: 0.3;
 }
+
+#icon-redes i:hover{
+    opacity: 1;
+    transition: 1s;
+    scale: 1.1;
+}
+
+.formulario-body {
+    background-color: #e5dccf;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 1200px; /* Limite máximo para não esticar demais em telas gigantes */
+    display: flex;
+    margin: 0 auto;
+    padding: 30px;
+    gap: 40px; /* Espaço entre o formulário e a imagem/mapa */
+}
+
+.form-esq {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#txt-form {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#txt-form h3 {
+    color: #251004;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    margin-bottom: 10px;
+}
+
+#txt-form p {
+    color: #6f624e;
+    line-height: 1.5;
+}
+
+#forms {
+    width: 100%;
+}
+
+#form-linha {
+    display: flex;
+    width: 100%;
+    gap: 10px; /* Espaço entre os inputs */
+    margin-bottom: 10px;
+}
+
+#form-linha input {
+    flex: 1; /* Faz os inputs dividirem o espaço igualmente */
+    padding: 10px;
+    border: 1px solid #937446;
+    border-radius: 5px;
+    background-color: transparent;
+    outline: none;
+}
+
+.form-area input {
+    width: 100% !important;
+    height: 150px;
+}
+
+.checkbox-line {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.checkbox-line p {
+    margin-left: 10px;
+    color: #6f624e;
+    font-size: 0.9rem;
+}
+
+#enviar-msg {
+    background-color: #9d8157;
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#enviar-msg:hover {
+    transform: scale(1.05); /* Transform é a forma mais otimizada de usar scale */
+    transition: 0.5s;
+    background-color: #6a5028;
+    cursor: pointer;
+}
+
+#enviar-msg i {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 900;
+    margin-right: 15px;
+}
+
+.form-dir {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#form-img img {
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #c86a34;
+    object-fit: cover;
+}
+
+iframe {
+    border-radius: 30px !important;
+    width: 100%;
+    height: 350px;
+    border: 1px solid #c86a34;
+}
+
 
 @media (max-width: 768px) {
     .container {
@@ -745,6 +874,119 @@ i{
     border: 2px solid #e4d3b4;
     border-radius: 90px;
     margin: 5px;
-    color:  #e4d3b4;;
+    color:  #e4d3b4;
 }
+
+@media (max-width: 768px) {
+    .formulario {
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .form-esq, .form-dir {
+        width: 100%;
+    }
+
+    #form-linha {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+
+    #form-linha input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #enviar-msg {
+        max-width: 100%;
+    }
+
+    iframe {
+        height: 250px;
+    }
+}
+
+
+
+}
+
+/* ========================================= */
+/* ESTILOS DO ALERTA (MODAL)                 */
+/* ========================================= */
+
+#alerta-sucesso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#alerta-sucesso.mostrar {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.alerta-conteudo {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-top: 5px solid #9d8157;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+#alerta-sucesso.mostrar .alerta-conteudo {
+    transform: translateY(0);
+}
+
+.icone-sucesso {
+    font-size: 50px;
+    color: #28a745;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.alerta-conteudo h3 {
+    color: #251004;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.alerta-conteudo p {
+    color: #6f624e;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#fechar-alerta {
+    background-color: #9d8157;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#fechar-alerta:hover {
+    background-color: #6a5028;
+    transform: scale(1.05);
 }
